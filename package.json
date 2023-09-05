@@ -1,0 +1,21 @@
+{
+  "name": "rock_paper_scissors",
+  "version": "1.0.0",
+  "description": "Rock paper scissors made using HTML,CSS,SASS and TYPESCRIPT",
+  "main": "index.js",
+  "scripts": {
+    "compile": "tsc",
+    "styles" : "sass styles/sass/index.sass styles/css/index.css --style=compressed",
+    "sass_watch" : "sass -w styles/sass/index.sass styles/css/index.css --style=compressed"
+  },
+  "keywords": [
+    "rockpaperscissors",
+    "HTML",
+    "CSS",
+    "JAVASCRIPT",
+    "SASS",
+    "TYPESCRIPT"
+  ],
+  "author": "LopCuns",
+  "license": "MIT"
+}

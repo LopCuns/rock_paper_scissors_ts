@@ -1,0 +1,94 @@
+$backgroundColor : #555
+$textColor : #eee
+$font :  Arial, Helvetica, sans-serif
+$neonBlue : #46cbe1
+body
+  position: relative
+  width: 100vw
+  min-height: 100vh
+  overflow-x: hidden 
+  margin : 0
+  background-color: $backgroundColor
+  color : $textColor
+  font-family : $font
+  // prevent body from starting on title margin
+  padding-top: 1px
+
+
+$option_size : clamp(10rem,30vw,15rem)
+rps-choose
+  display : inline-block
+  width: $option_size
+  height: $option_size
+rps-choose:nth-of-type(3)
+  grid-column:  1 / span 2
+
+.pageTitle
+  text-align : center
+  font-size : 3em
+
+.main
+  width: 100%
+  text-align: center
+  margin-top: 2rem
+  &__game
+    display: grid
+    $gap : 3rem
+    width : min(100%,$option_size * 2 + $gap)
+    grid-template-columns : 1fr 1fr
+    grid-template-rows : 1fr
+    justify-items : center
+    gap : $gap
+    margin : 0 auto
+    &__restart
+      margin-top: 3rem
+      padding: 0.5rem 1rem
+      border: none
+      border-radius : 5px
+      background-color: $neonBlue
+      color : #fff
+      font:
+        size: 1.5em
+        family : $font
+      cursor: pointer
+
+.footer
+  position: relative
+  bottom: 0
+  width: 100vw
+  margin-top: 9rem
+  padding: 1rem
+  text-align: center
+  background-color: #333
+  & a
+    color: $neonBlue
+
+
+.hidden
+  display: none
+.resultsTitle
+  color : $neonBlue
+
+
+$fadeTime : .3s
+.intrigueFadeLeft
+  animation : intrigueFadeLeft $fadeTime
+
+.intrigueFadeRight
+  animation : intrigueFadeRight $fadeTime
+
+@keyframes intrigueFadeLeft 
+  from 
+    transform: translateX(-50%)
+    opacity: 0
+  to 
+    transform: translateX(0)
+    opacity: 1
+
+@keyframes intrigueFadeRight
+  from 
+    transform: translateX(50%)
+    opacity: 0
+  to 
+    transform: translateX(0)
+    opacity: 1

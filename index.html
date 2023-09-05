@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rock paper scirssors game build using HTML, SASS and TYPESCRIPT">
+  <link rel="stylesheet" href="styles/css/index.css">
+  <title>| Rock paper scissors |</title>
+</head>
+<body>
+  <h1 class="pageTitle">Rock paper scissors</h1>
+  <main class="main" id="main">
+    <h2 class="resultsTitle" id="resultsTitle">Rock paper scissors</h2>
+    <div class="main__game">
+      <rps-choose data-option="rock" data-borderColor="#46cbe1" data-bgColor="#d9d9d9" id="option_1"></rps-choose>
+      <rps-choose data-option="paper" data-borderColor="#46cbe1" data-bgColor="#d9d9d9" id="option_2"></rps-choose>
+      <rps-choose data-option="scissors" data-borderColor="#46cbe1" data-bgColor="#d9d9d9" id="option_3"></rps-choose>
+    </div>
+    <button class="main__game__restart hidden" id="restartBtn">Play again!</button>
+  </main>
+  <footer class="footer">
+    <p>Made with love by <a href="https://www.github.com/LopCuns" target="_blank">LopCuns</a></p>
+  </footer>
+  <script src="scripts/index.js" type="module"></script>
+</body>
+</html>
